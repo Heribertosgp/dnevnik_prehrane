@@ -1,0 +1,5 @@
+# Para un proxy HTTPS ya instalado en el host. APP_ORIGIN conserva tu dominio.
+services:
+  app:
+    ports:
+      - "127.0.0.1:8080:3000"

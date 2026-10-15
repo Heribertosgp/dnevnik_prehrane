@@ -1,0 +1,7 @@
+# Sólo para túnel SSH o proxy existente. Nunca publicar 8080 en 0.0.0.0.
+services:
+  app:
+    environment:
+      APP_ORIGIN: http://127.0.0.1:8080
+    ports:
+      - "127.0.0.1:8080:3000"

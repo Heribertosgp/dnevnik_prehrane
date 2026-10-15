@@ -1,0 +1,13 @@
+node_modules
+.git
+.env
+secrets
+data
+models
+backups
+*.tar.gz
+__pycache__
+*.py[cod]
+.env.*
+*.pem
+*.key

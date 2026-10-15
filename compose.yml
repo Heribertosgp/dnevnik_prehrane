@@ -1,0 +1,62 @@
+name: mesa-stol
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      APP_ORIGIN: ${APP_ORIGIN:?Ejecuta primero scripts/configure.py}
+      MODEL_THREADS: ${MODEL_THREADS:-2}
+      MODEL_OFFLINE: ${MODEL_OFFLINE:-0}
+    secrets:
+      - owner
+    volumes:
+      - diary_data:/data
+      - model_cache:/models
+    networks:
+      - private
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?Ejecuta primero scripts/configure.py}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - private
+    depends_on:
+      app:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+secrets:
+  owner:
+    file: ./secrets/owner.json
+volumes:
+  diary_data:
+  model_cache:
+  caddy_data:
+  caddy_config:
+networks:
+  private:
