@@ -12,6 +12,10 @@ Ova verzija nudi sučelje dnevnika prehrane koje se može instalirati na posluž
 
 Upozorenje! Ovaj je model izrađen uz pomoć GPT6 pod mojim nadzorom. Instalacija i uporaba odgovornost su krajnjeg korisnika. Važno je pročitati licence i ne koristiti ga u komercijalne svrhe. Ovo je samo alat za praćenje unosa hrane. Važno je savjetovati se s liječnikom i/ili nutricionistom.
 
+### Instalacija uz pomoć AI asistenta
+
+Otvorite [prompt za instalaciju uz pomoć AI-ja](AI_INSTALLATION_PROMPT.md), kopirajte cijeli označeni blok u svoj AI asistent ili agentski sustav i navedite postavke svojeg poslužitelja. Zatražite odgovore na hrvatskom. Prompt vodi kroz provjeru poslužitelja, instalaciju, pristup, prevođenje i sigurnosne kopije. Za izvršavanje je potreban odobren pristup terminalu poslužitelja; bez njega asistent može davati upute. Lozinke i privatne SSH ključeve unosite samo sigurnim putem, nikad u razgovor.
+
 ### Što je uključeno
 
 - Jedan korisnik, zaštićen lozinkom. Autentifikacija štiti stranicu i sve radnje čitanja, pisanja i prevođenja.
@@ -197,6 +201,10 @@ This version provides a food diary interface that can be installed on a server. 
 
 Warning! This model was created with GPT6 under my supervision. Installation and use are the responsibility of the end user. It is important to read the licenses and not use it for commercial purposes. This is only a tool for monitoring your food intake. It is important to consult your doctor and/or nutritionist.
 
+### Installation with an AI assistant
+
+Open the [AI installation prompt](AI_INSTALLATION_PROMPT.md), copy the entire marked block into your AI assistant or agent framework, and supply your server settings. Request replies in English. The prompt covers server checks, installation, access, translation and backups. Execution requires authorized access to a terminal on your server; without it, the assistant can provide instructions. Enter passwords and private SSH keys only through a secure mechanism, never in the conversation.
+
 ### What is included
 
 - A single password-protected user. Authentication protects the page and all reading, writing and translation operations.
@@ -381,6 +389,10 @@ Versión 1.0.0. Diario personal de comidas con informes en español y croata.
 Esta versión presenta una interfaz de un diario de comidas que se puede instalar en un servidor. Contiene un modelo de traducción para crear informes bilingües. No utiliza base de datos ni necesita una clave de API de traducción.
 
 Advertencia! Este modelo fue creado con GPT6 bajo mi supervisión. La instalación y el uso son responsabilidad del usuario final. Es importante que lea las licencias y no se use con fines comerciales. Esto sólo es un herramienta para monitorear sus ingestas. Es importante que consulte a su médico y/o nutricionista.
+
+### Instalación con un asistente de IA
+
+Abre el [prompt de instalación con IA](AI_INSTALLATION_PROMPT.md), copia el bloque marcado completo en tu asistente de IA o sistema de agentes e indica la configuración de tu servidor. Solicita las respuestas en español. El prompt guía la revisión del servidor, la instalación, el acceso, la traducción y las copias de seguridad. Para ejecutar los pasos necesita acceso autorizado a una terminal de tu servidor; sin él, puede darte instrucciones. Introduce contraseñas y claves SSH privadas únicamente mediante un mecanismo seguro, nunca en la conversación.
 
 ### Qué incluye
 
