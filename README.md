@@ -2,13 +2,15 @@
 
 Versión 1.0.0. Diario personal de comidas con informes en español y croata.
 
-Esta versión conserva la interfaz del diario original y sustituye el almacenamiento del navegador por archivos en el servidor. También traslada allí el modelo de traducción. No utiliza base de datos ni necesita una clave de API de traducción.
+Esta versión presenta una interfaz de un diario de comidas que se puede instalar en un servidor. Contiene un modelo de traducción para crear informes bilingües. No utiliza base de datos ni necesita una clave de API de traducción.
+
+Advertencia! Este modelo fue creado con GPT6 bajo mi supervisión. La instalación y el uso son responsabilidad del usuario final. Es importante que lea las licencias y no se use con fines comerciales. Esto sólo es un herramienta para monitorear sus ingestas. Es importante que consulte a su médico y/o nutricionista.
 
 ## Qué incluye
 
 - Un único usuario, con contraseña. La autenticación protege la página y todas las operaciones de lectura, escritura y traducción.
 - Diario en `/data/diary.json`, con escritura atómica, control de cambios concurrentes y las últimas 50 versiones en `/data/history/`.
-- Traducción M2M100 418M en la CPU del servidor, en un proceso separado. Una avería del traductor no impide guardar borradores.
+- Traducción M2M100 418M en la CPU del servidor, en un proceso separado. Una avería del traductor no impide guardar borradores. Nota: La aplicación se puede usar sin el traductor.
 - Importación de las copias JSON de la versión anterior; exportación de copias e informes bilingües HTML/PDF.
 - Docker Compose, un volumen persistente para las entradas, otro para el modelo y Caddy para HTTPS.
 - El sitio original alojado anteriormente no se modifica con este paquete.
@@ -174,3 +176,4 @@ Si `diary.json` se daña, la aplicación se niega a arrancar para no sobrescribi
 - Modelo, archivos y licencia: https://huggingface.co/Xenova/m2m100_418M
 
 Las guías oficiales permiten adaptar el despliegue a tu sistema operativo. No entregues contraseñas, claves privadas SSH ni archivos de credenciales en un chat para obtener ayuda.
+Si no tienes un servidor o no tienes la habilidad técnica para hacer la instalación ponte en contacto con nosotros y encontraremos juntos una solución (utiliza la función de mensaje aquí en github o cualquiera de mis datos de contacto publicados en esta cuenta).
